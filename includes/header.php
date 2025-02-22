@@ -10,7 +10,7 @@
 <body>
 
 <header>
-    <div class="logo">QuickPay</div>
+    <div class= "logo">QuickPay</div>
     <nav>
         <ul>
             <li> <a href="#"> Home </a></li>
