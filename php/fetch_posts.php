@@ -1,21 +1,18 @@
 <?php
-include "db_Connect.php";
+include 'db_connect.php';
 
 $sql = "SELECT * FROM posts";
-$result=$conn -> query($sql);
+$result = $conn->query($sql);
+
+if (!$result) {
+    die("SQL Error: " . $conn->error); // Debugging error message
+}
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo "
-        <div class='post'>
-            <img src='{$row['icon']}' alt='Icon'>
-            <h3>{$row['title']}</h3>
-            <p>{$row['description']}</p>
-        </div>";
+        echo "<pre>"; print_r($row); echo "</pre>"; // Debug output
     }
-}else{
-    echo "<p> No posts available. </p>";
+} else {
+    echo "No posts available.";
 }
-
-$conn -> close();
 ?>
