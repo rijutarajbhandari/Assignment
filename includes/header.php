@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Responsive Home Page </title>
     <link rel ="stylesheet" href="C:/Users/user/EBPearls/Assignment/css/style.css">
-    <script defer src="C:/Users/user/EBPearls/Assignment/js/script.js></script>
+    <script defer src="C:/Users/user/EBPearls/Assignment/js/script.js"></script>
 </head>
 <body>
 
