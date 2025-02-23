@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 data.forEach(task => {
                     let taskItem = document.createElement("li");
                     taskItem.classList.add("task-item");
+                    taskItem.setAttribute("data-id", task.id);
                     if (task.status === "completed") taskItem.classList.add("completed");
 
                     taskItem.innerHTML = `
@@ -19,39 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
                     taskList.appendChild(taskItem);
                 });
+
+                // Initialize Sortable.js for drag-and-drop
+                new Sortable(taskList, {
+                    animation: 150,
+                    onEnd: function (evt) {
+                        let items = document.querySelectorAll(".task-item");
+                        let updatedOrder = [];
+                        items.forEach((item, index) => {
+                            updatedOrder.push({ id: item.getAttribute("data-id"), position: index + 1 });
+                        });
+
+                        fetch("php/update_order.php", {
+                            method: "POST",
+                            body: JSON.stringify(updatedOrder),
+                            headers: { "Content-Type": "application/json" }
+                        });
+                    }
+                });
             });
     }
-
-    taskForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        let taskInput = document.getElementById("taskInput").value;
-
-        fetch("php/add_task.php", {
-            method: "POST",
-            body: new URLSearchParams({ task: taskInput }),
-            headers: { "Content-Type": "application/x-www-form-urlencoded" }
-        }).then(() => {
-            taskInput = "";
-            loadTasks();
-        });
-    });
-
-    window.updateTask = function (id, status) {
-        let newStatus = status === "pending" ? "completed" : "pending";
-        fetch("php/update_task.php", {
-            method: "POST",
-            body: new URLSearchParams({ id: id, status: newStatus }),
-            headers: { "Content-Type": "application/x-www-form-urlencoded" }
-        }).then(loadTasks);
-    };
-
-    window.deleteTask = function (id) {
-        fetch("php/delete_task.php", {
-            method: "POST",
-            body: new URLSearchParams({ id: id }),
-            headers: { "Content-Type": "application/x-www-form-urlencoded" }
-        }).then(loadTasks);
-    };
 
     loadTasks();
 });
