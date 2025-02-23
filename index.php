@@ -9,25 +9,41 @@
 </section>
 
 <section class="icon-block">
-    <h2>Outsource Payment Services</h2>
+    <h2>Outsource Payment Collection</h2>
+    <h2> Faster and flexible access to cash flow from one or all your invoices</h2>
     <div id="post-container">
         <?php include "php/fetch_posts.php"; ?>
     </div>
 </section>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <p>Your daily to-do list</p>
+        <div class="task-box">
+            <ul id="task-list">
+                <li><input type="checkbox"> Task Item One <button class="delete">Delete</button></li>
+                <li><input type="checkbox" checked> Task Item Two <button class="delete">Delete</button></li>
+            </ul>
+            <input type="text" id="new-task" placeholder="Add new task">
+            <button id="add-task">Add Task</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
 
-<section class="task-manager">
-    <h2>Task Manager</h2>
-    <form method ="POST" id="taskForm">
-        <input type="text" id="taskInput" placeholder="Enter a new task" required>
-        <button type="submit">Add Task</button>
-    </form>
-    <ul id="taskList"></ul>
-</section>
 
-<?php include 'includes/footer.php'; ?>
-<script src="js/task_manager.js"></script>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +54,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<script src="js/task_manager.js"></script>
 
     <h2>Contact Us</h2>
     <form id="contactForm" action="php/contact.php" method="POST">
@@ -63,3 +80,6 @@
     <script src="js/validate.js"></script>
 </body>
 </html>
+
+<?php include 'includes/footer.php'; ?>
+
