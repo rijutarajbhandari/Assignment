@@ -27,3 +27,4 @@ CREATE TABLE contacts(
     message TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
