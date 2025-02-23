@@ -6,46 +6,298 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Body and General Styles */
-body {
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
+.task-box {
+    background: #f0f0ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #007bff;
+    margin: 20px 0;
+}
+
+/* Styling for the Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styling for the Contact Form */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;  /* Reduced font size */
+    color: #007bff;
+    margin: 15px 0;  /* Reduced margin */
+}
+
+/* Styling for the Form */
+form {
+    max-width: 450px;  /* Reduced the max-width */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;  /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label Styling */
+form label {
+    display: block;
+    font-size: 14px;  /* Reduced font size */
+    margin-bottom: 6px;  /* Reduced margin */
+    color: #333;
+}
+
+/* Input and Textarea Styling */
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form input[type="text"]#captcha {
+    width: 100%;
+    padding: 8px;  /* Reduced padding */
+    margin: 8px 0 12px 0;  /* Reduced margin */
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;  /* Reduced font size */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form input[type="text"]#captcha:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styling for the Button */
+form button {
+    width: 100%;
+    padding: 10px;  /* Reduced padding */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;  /* Reduced font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for Error or Success Message */
+#formMessage {
+    font-size: 14px;
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+/* For Mobile Responsiveness */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;  /* Further reduced padding for small screens */
+    }
+
+    form h2 {
+        font-size: 24px;  /* Reduced font size */
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea,
+    form input[type="text"]#captcha {
+        font-size: 13px;  /* Reduced font size for small screens */
+    }
+
+    form button {
+        font-size: 14px;  /* Reduced font size */
+    }
+}
+
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+/* Header Styling */
 header {
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logo {
+    color: black;
     font-size: 24px;
     font-weight: bold;
 }
 
-/* Navigation */
+/* Navigation Styling */
 nav ul {
     list-style: none;
-    text-align: center;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;  /* Black text for links */
     font-weight: bold;
     font-size: 18px;
+    padding: 8px 15px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffdd57;
+    color: white;  /* White text on hover */
 }
+
+/* Login Link */
+nav ul li a.login {
+    color: black;  /* Black text for login link */
+}
+
+nav ul li a.login:hover {
+    color: white;  /* White text on hover */
+}
+
+/* Get Demo Button */
+nav ul li button {
+    background-color: transparent;  /* Transparent background */
+    color: #1a436e;  /* Blue text color */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid transparent;  /* Transparent border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li button:hover {
+    background-color: #007bff;  /* Blue background on hover */
+    color: white;  /* White text on hover */
+    border: 2px solid #007bff;  /* Blue border on hover */
+}
+
+/* Header Image Styling (if any) */
+.header-image {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Styling for Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav ul li button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
 
 /* Banner Section */
 
@@ -161,6 +413,135 @@ footer {
     font-size: 14px;
 }
 
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Task Box */
+.task-box {
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#task-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#task-list li button.delete {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li button.delete:hover {
+    background-color: #e60000;
+}
+
+/* New Task Input */
+#new-task {
+    width: calc(100% - 100px);
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+#new-task:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Add Task Button */
+#add-task {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-task:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #task-list li {
+        font-size: 14px;
+    }
+
+    #new-task {
+        width: calc(100% - 90px);
+    }
+
+    #add-task {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .slider img {
@@ -200,5 +581,6 @@ footer {
         text-decoration: line-through;
         color: gray;
     }
+    
     
 }
