@@ -1,11 +1,10 @@
 <?php
-
 include 'db_connect.php';
 
-$sql= "SELECT * FROM tasks ORDER BY position ASC";
-$result=$conn -> query($sql);
+$sql = "SELECT * FROM tasks ORDER BY position ASC";
+$result = $conn->query($sql);
 
-$tasks=[];
+$tasks = [];
 while ($row = $result->fetch_assoc()) {
     $tasks[] = $row;
 }
