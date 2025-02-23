@@ -2,9 +2,9 @@
 
 <section class="banner">
     <div class="slider">
-        <img src="C:/Users/user/EBPearls/Assignment/img/secpay.jpg" alt="Slide 1">
-        <img src="C:/Users/user/EBPearls/Assignment/img/fasttrans.jpg" alt="Slide 2">
-        <img src="C:/Users/user/EBPearls/Assignment/img/globalaccess.jpg" alt="Slide 3">
+        <img src="img/secpay.jpg" alt="Slide 1" style="width: 50%; max-height: 300px; object-fit: cover; display: block; margin: 0 auto;" loading="lazy">
+        <img src="img/fasttrans.jpg" alt="Slide 2" style="width: 50%; max-height: 300px; object-fit: cover; display: block; margin: 0 auto;" loading="lazy">
+        <img src="img/globalaccess.jpg" alt="Slide 3" style="width: 50%; max-height: 300px; object-fit: cover; display: block; margin: 0 auto;" loading="lazy">
     </div>
 </section>
 
