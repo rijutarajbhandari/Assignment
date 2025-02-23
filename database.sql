@@ -17,5 +17,13 @@ CREATE TABLE tasks(
     id INT AUTO_INCREMENT PRIMARY KEY,
     task VARCHAR(255) NOT NULL,
     status ENUM ('pending','completed') default 'pending',
-    posistion INT NOT NULL
+    position INT NOT NULL
+);
+
+CREATE TABLE contacts(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
